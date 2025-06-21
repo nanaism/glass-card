@@ -9,12 +9,20 @@
   <body>
     <div class="card">
       <div class="content">
-        <h2>5.23</h2>
+        <h2 id="today-date"></h2>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const today = new Date();
+            const month = today.getMonth() + 1;
+            const day = today.getDate();
+            document.getElementById(
+              "today-date"
+            ).textContent = `${month}.${day}`;
+          });
+        </script>
         <h3>あい</h3>
         <p>グラスカードを作ってみました.</p>
-        <a href="https://ayes.notion.site/CSS-529cfe0d76934f5387c3c705f4e7defb"
-          >More Details</a
-        >
+        <a href="https://github.com/nanaism/glass-card">More Details</a>
       </div>
     </div>
     <script src="./vanilla-tilt.js"></script>
